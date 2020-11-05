@@ -2,7 +2,7 @@
 
 ## About Semicolon Project
 
-Semicolon is a social media project that create with [Laravel](https://laravel.com/docs) and Native [CSS](https://en.wikipedia.org/wiki/CSS) also integrated with [Bootstrap](https://getbootstrap.com/). This project create by :
+Semicolon is a social media project that create with [Laravel](https://laravel.com/docs) and [Native CSS](https://en.wikipedia.org/wiki/CSS) also integrated with [Bootstrap](https://getbootstrap.com/). This project create by :
 
 - [Indrajaya](https://github.com/indrajayaswk).
 - [Bagoes Pantera](https://github.com/BagoesPantera).
