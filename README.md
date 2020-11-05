@@ -10,6 +10,7 @@ Semicolon is a social media project that create with [Laravel](https://laravel.c
 - [Adhitya Mahardika](https://github.com/adhitsimple96).
 - [Tanaka Junyartha](https://github.com/truestyle06).
 - [Krisna Ananta](https://github.com/Krisnaananta).
+- [Arista Widana](https://github.com/Dewaaris8).
 
 ## License
 
