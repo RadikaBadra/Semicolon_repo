@@ -113,15 +113,16 @@
                        <span class="mx-auto h3 mb-n3">LOGIN</span>
                     </div>
                     <div class="card-body">
-                        <form action="#" class="needs-validation" method="post" novalidate >
+                        <form action="{{ route('login') }}" class="needs-validation" method="post" novalidate >
+                        @csrf
                             <div class="form-group">
                                 
-                                <input id="username" type="text" placeholder="Nama Pengguna, No HP , Email" class="form-control mt-1" name="username" required autofocus autocomplete="off">
+                                <input id="username" type="text" placeholder="Nama Pengguna, No HP , Email" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror" name="username" required autofocus autocomplete="off">
                                 
                             </div>
                             <div class="form-group">
 
-                                <input type="password" placeholder="Kata Sandi" id="password" class="form-control mt-1" required>
+                                <input type="password" placeholder="Kata Sandi" name="password" id="password" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror" required>
                             </div>
                             
                             <div class="form-group mt-5">

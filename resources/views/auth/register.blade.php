@@ -146,9 +146,6 @@
                 <div class="card card-primary p-2  mt-4 register text-muted text-center">
                    <p class="mb-n1 p-2"> Sudah Punya Akun ? <a href="/login" >Masuk</a></p>
                 </div>
-                @error('password')
-                <p>{{$message}}</p>
-                @enderror
             </div>
         </div>
     </div>
