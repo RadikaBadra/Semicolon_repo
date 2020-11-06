@@ -115,23 +115,24 @@
                     </div>
                     <div class="card-body">
                         <p class="text-center">Buat Akun untuk Melihat Foto dan Video dari Teman Anda</p>
-                        <form action="#" class="needs-validation" method="post" novalidate >
+                        <form action="{{ route('register') }}" class="needs-validation" method="post" novalidate >
+                        @csrf
                             <div class="form-group">
                                 
-                                <input id="text" type="text" placeholder="No HP atau Email" class="form-control mt-1" name="email" required autofocus autocomplete="off">
+                                <input id="text" type="text" placeholder="No HP atau Email" class="form-control mt-1 @error('email') is-invalid @enderror" name="email" required autofocus autocomplete="off">
                                 
                             </div>
                              <div class="form-group">
 
-                                <input type="text" placeholder="Nama Lengkap" id="namaLengkap" name="namaLengkap" class="form-control mt-1" required>
+                                <input type="text" placeholder="Nama Lengkap" id="namaLengkap" name="namaLengkap" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror" required>
                             </div>
                              <div class="form-group">
 
-                                <input type="text" placeholder="Nama Pengguna" id="namaPengguna" name="namaPengguna" class="form-control mt-1" required>
+                                <input type="text" placeholder="Nama Pengguna" id="namaPengguna" name="namaPengguna" class="form-control mt-1 @error('namaPengguna') is-invalid @enderror" required>
                             </div>
                             <div class="form-group">
 
-                                <input type="password" placeholder="Kata Sandi" name="password" id="password" class="form-control mt-1" required>
+                                <input type="password" placeholder="Kata Sandi" name="password" id="password" class="form-control mt-1 @error('password') is-invalid @enderror" required>
                             </div>
                             
                             <div class="form-group mt-5">
@@ -143,8 +144,11 @@
                     </div>
                 </div>
                 <div class="card card-primary p-2  mt-4 register text-muted text-center">
-                   <p class="mb-n1 p-2"> Sudah Punya Akun ? <a href="#" >Masuk</a></p>
+                   <p class="mb-n1 p-2"> Sudah Punya Akun ? <a href="/login" >Masuk</a></p>
                 </div>
+                @error('password')
+                <p>{{$message}}</p>
+                @enderror
             </div>
         </div>
     </div>

@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="card card-primary p-2  mt-4 register text-muted text-center">
-                   <p class="mb-n1 p-2"> Belum Punya Akun ? <a href="#" >Daftar</a></p>
+                   <p class="mb-n1 p-2"> Belum Punya Akun ? <a href="/register" >Daftar</a></p>
                 </div>
             </div>
         </div>
