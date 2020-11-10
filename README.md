@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/RadikaBadra/Semicolon_repo" target="_blank"><img src="https://raw.githubusercontent.com/RadikaBadra/Semicolon_repo/master/prototype/co%20media.png" width="400"></a></p>
+<p align="center"><a href="https://github.com/RadikaBadra/Semicolon_repo" target="_blank"><img src="https://raw.githubusercontent.com/RadikaBadra/Semicolon_repo/master/prototype/co%20media.png" width="200"></a></p>
 
 ## About Semicolon Project
 
