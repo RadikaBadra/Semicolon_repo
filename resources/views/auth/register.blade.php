@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+      <link rel="stylesheet" href="css/regis.css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,16 +15,16 @@
 
     <style>
 
-         @import '~pretty-checkbox/src/pretty-checkbox.scss';
+          @import '~pretty-checkbox/src/pretty-checkbox.scss';
 
          * {
              margin: 0;
              padding: 0;
-             font-family: 'Nunito', sans-serif;
+             font-family: 'Verdana', sans-serif;
          }
 
          body {
-             background-color: #fafdfb;
+             background-color: #fff;
              font-size: 14px;
          }
 
@@ -39,10 +40,10 @@
 
         .card {
             
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
             background-color: #fff;
             border-radius: 3px;
             border: none;
+            width : 150%;
         }
 
         .card .card-header {
@@ -61,7 +62,7 @@
 
         .card.card-primary {
             margin-top: 20%;
-            border: 3px solid #A9B2F6;
+
         }
 
         .register {
@@ -93,28 +94,41 @@
         .h3 {
             letter-spacing: 1px;
         }
-
+        /* .side {
+            width :66%;
+            color : white;
+            height : 100vh;
+        }
+        .side h1{
+            margin-top: 20%;
+            margin-left: 38%;
+        } */
         
 
       
 
 
-    
     </style>
 
     <title>Semicolon-Register</title>
   </head>
   <body>
+  <div class="d-flex">
+    <div class="side bg-primary">
+    <h6 class = "mt-2 ml-2 font-weight-bold">COMEDIA</h6>
+    <h1 class = "font-weight-bold">WELCOME</h1>
+    <center><p class="text-justify mt-4">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p><center>
+    </div>
+    <div class="p-2">
     <div class="container">
         <div class="row ">
-            <div class=" col-md-6 offset-md-3  col-xl-4 offset-xl-4">
+            <div class=" offset-md-3 mt-3">
                 <div class="card card-primary ">
                     <div class="card-header font-weight-bold">
-                       <span class="mx-auto h3 mb-n3">REGISTER</span>
+                       <span class="mx-auto h3 mb-n3 font-weight-bold">REGISTER</span>
                        
                     </div>
                     <div class="card-body">
-                        <p class="text-center">Buat Akun untuk Melihat Foto dan Video dari Teman Anda</p>
                         <form action="{{ route('register') }}" class="needs-validation" method="post" novalidate >
                         @csrf
                             <div class="form-group">
@@ -150,14 +164,9 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
+</div>
+  </div>
+    
 
 
 

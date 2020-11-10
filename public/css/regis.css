@@ -1,0 +1,97 @@
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.form-control:focus {
+   box-shadow: none;
+}
+
+.text-small {
+   font-size: 12px;
+   line-height:20px;
+   
+}
+
+.card {
+   background-color: #fff;
+   border-radius: 3px;
+   border: none;
+   width : 150%;
+}
+
+.card .card-header {
+   
+   border-bottom-color: #f9f9f9;
+   line-height: 30px;
+   align-self: center;
+   width: 100%;
+   min-height: 70px;
+   padding: 15px 25px;
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   
+}
+
+.card.card-primary {
+   margin-top: 20%;
+
+}
+
+.register {
+   margin-bottom: 50px;
+}
+
+.form-control {
+   border: 1px solid #0080ff;
+   height: 2.7rem;
+}
+
+.form-control {
+   border-radius: 10px;
+}
+
+.input-group-text, select.form-control:not([size]):not([multiple]), .form-control:not(.form-control-sm):not(.form-control-lg) {
+   font-size: 12px;
+}
+
+
+.login-btn {
+   font-size: 14px;
+}
+
+.custom-control-label {
+   line-height: 26px;
+   
+}
+.h3 {
+   letter-spacing: 1px;
+}
+.side {
+   width :66%;
+   color : white;
+   height : 100vh;
+   background: linear-gradient(81deg, rgba(32,21,107,1) 0%, rgba(145,0,255,1) 100%);
+}
+.side h1{
+   margin-top: 20%;
+   margin-left: 38%;
+}
+.side p{
+    width: 60%;
+    
+}
+
+
+
+
+
