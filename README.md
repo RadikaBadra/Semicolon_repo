@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://github.com/RadikaBadra/Semicolon_repo" target="_blank"><img src="https://raw.githubusercontent.com/RadikaBadra/Semicolon_repo/master/prototype/co%20media.png" width="200"></a></p>
 
 ## About Semicolon Project
 
@@ -11,6 +11,16 @@ Semicolon is a social media project that create with [Laravel](https://laravel.c
 - [Tanaka Junyartha](https://github.com/truestyle06).
 - [Krisna Ananta](https://github.com/Krisnaananta).
 - [Arista Widana](https://github.com/Dewaaris8).
+
+## Note
+- If you found any error that say missing file, you can do :
+```
+composer update --no-scripts
+```
+- If you found error that say about db_socket, you can remove this code from .env file :
+```
+DB_SOCKET=/opt/lampp/var/mysql/mysql.sock
+```
 
 ## License
 
