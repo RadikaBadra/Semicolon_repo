@@ -17,4 +17,9 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/user-page', function () {
     return view('layouts.main');
 });
+
+Route::get('/user-profile', function () {
+    return view('profile');
+});
+
 Auth::routes();
