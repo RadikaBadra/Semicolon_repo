@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-Route::get('/profile', 'HomeController@profile')->name('profile');
-=======
 Route::get('/user-page', function () {
     return view('layouts.main');
 });
@@ -24,6 +21,8 @@ Route::get('/user-page', function () {
 Route::get('/user-profile', function () {
     return view('profile');
 });
->>>>>>> 1f0724b5b3ad5478fb0eb6ec68d3278d881d2ca7
+Route::get('/admin',function(){
+    return view('admin');
+});
 
 Auth::routes();
