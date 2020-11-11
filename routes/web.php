@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-
+Route::get('/user-page', function () {
+    return view('layouts.main');
+});
 Auth::routes();
