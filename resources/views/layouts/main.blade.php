@@ -17,8 +17,12 @@
     <title>Comedia - Main</title>
 
     <style>
+        body{
+            font-family:verdana;
+        }
         .card {
             border-radius: 20px;
+           
         }
         .card .left-area {
             padding-left: 10px;
@@ -26,77 +30,91 @@
             
         }
         .card .right-area {
-            margin-right: 80px;
+            margin-right: 100px;
             margin-top: 5px;
             
         }
         .card .left-area h5 {
-            font-size: 1rem;
+            font-size: 18px;
+            margin-top: -15px;
+        }
+        .card .left-area h6 {
+            font-size: 14px;
             margin-top: -15px;
         }
         .card .left-area :first-child {
             margin-top: -5px;
             font-weight: bold;
         }
-        .card .left-area p+p {
-            font-size: .6rem;
-            margin-top: -17px;
+        .card .left-area p {
+            font-size: .8rem;
+            margin-top: -7px;
         }
         .container-photo {
             border: 1px solid black;
             width: 65%;
-            height: 40vh;
+            height: 50vh;
             max-width: 70%;
-            max-height: 40vh;
+            max-height: 50vh;
         }
         .container-photo img {
             max-width: 100%;
             max-height: inherit;
-            padding:5px;
+            object-fit: cover;
         }
         .container-desc {
             width: 30%;
-            padding: 5px;
-            border: 1px solid black;
-            margin-left: 20px;
+            margin-left: 2px;
             height: 40vh;
             max-width: 70%;
             max-height: 40vh;
+            padding : 20px;
+            padding-top:2px;
+        
+        }
+        .container-desc p{
+            margin-left: -40px;
         }
         .user .card img {
             margin-left: 12px;
             margin-right: 30px;
+        }
+        .container .name {
+            color :#20156B;
+        }
+        .post{
+            box-shadow: 5px 3px 11px -5px rgba(132,132,132,0.81);
         }
     </style>
 </head>
 
 <body>
     <div class="container-fluid p-0">
-        <nav class="w-100 navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">COMEDIA</a>
+        <nav class="w-100 navbar navbar-expand-lg bg-light navbar-light ">
+            <a class="navbar-brand" href="/">COMEDIA</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link fas fa-home mr-3 "></a>
+                        <a href="/" class="nav-link fas fa-home mr-3 "></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fas fa-search mr-3"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fas fa-user mr-3"></a>
+                        <a href ="/profile" class="nav-link fas fa-user mr-3"></a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="container mt-3">
-            <h2>Hello Jin Sakai</h2>
-            <h6>HERE RECOMMENDED POST FOR YOU </h6>
-            <div class="card mt-3">
-                <i class="far fa-bookmark fas fa-2x ml-auto px-3 mr-2 mt-4 mb-1"></i>
+            <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello Jin Sakai</h1>
+            <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
+            <div class="card post mt-3">
+                <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
                 <div class="card-body">
                     <div class="container-photo float-left">
                         <img src="https://meshle.com/content/uploads/2019/04/GamingLP2.jpg" alt="" width="100%" height="100%" >
@@ -106,15 +124,16 @@
                     </div>
                 </div>
                 <div class="container d-flex">
+                <!-- <div><img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="10%" height="30%"></div> -->
                     <div class="left-area mr-auto">
-                        <p>semicolon</p>
+                        <h5>semicolon</h5>
                         <p class="text-muted">3 days ago</p>
-                        <p>Selamat Ulang Tahun Untuk Radika</p>
+                        <h6>Selamat Ulang Tahun Untuk Radika</h6>
                     </div>
                     <div class="right-area ml-auto">
-                        <i class="fas fa-comment-alt fas fa-2x mr-5"></i>
-                        <i class="fas fa-heart fas fa-2x mr-5"></i>
-                        <i class="fas fa-share-alt fas fa-2x mr-5"></i>
+                        <i class="fas fa-comment-alt fas fa-lg mr-5"></i>
+                        <i class="fas fa-heart fas fa-lg mr-5"></i>
+                        <i class="fas fa-share-alt fas fa-lg mr-5"></i>
                     </div>
                 </div>
                 
