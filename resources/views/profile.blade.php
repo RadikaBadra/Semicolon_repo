@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNav" >
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link fas fa-home mr-3 "></a>
+                        <a href="/" class="nav-link fas fa-home mr-3 "></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fas fa-search mr-3"></a>

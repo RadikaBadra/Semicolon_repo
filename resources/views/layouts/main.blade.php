@@ -16,76 +16,8 @@
 
     <title>Comedia - Main</title>
 
-    <style>
-        body{
-            font-family:verdana;
-        }
-        .card {
-            border-radius: 20px;
-           
-        }
-        .card .left-area {
-            padding-left: 10px;
-            margin-bottom: 40px;;
-            
-        }
-        .card .right-area {
-            margin-right: 100px;
-            margin-top: 5px;
-            
-        }
-        .card .left-area h5 {
-            font-size: 18px;
-            margin-top: -15px;
-        }
-        .card .left-area h6 {
-            font-size: 14px;
-            margin-top: -15px;
-        }
-        .card .left-area :first-child {
-            margin-top: -5px;
-            font-weight: bold;
-        }
-        .card .left-area p {
-            font-size: .8rem;
-            margin-top: -7px;
-        }
-        .container-photo {
-            border: 1px solid black;
-            width: 65%;
-            height: 50vh;
-            max-width: 70%;
-            max-height: 50vh;
-        }
-        .container-photo img {
-            max-width: 100%;
-            max-height: inherit;
-            object-fit: cover;
-        }
-        .container-desc {
-            width: 30%;
-            margin-left: 2px;
-            height: 40vh;
-            max-width: 70%;
-            max-height: 40vh;
-            padding : 20px;
-            padding-top:2px;
-        
-        }
-        .container-desc p{
-            margin-left: -40px;
-        }
-        .user .card img {
-            margin-left: 12px;
-            margin-right: 30px;
-        }
-        .container .name {
-            color :#20156B;
-        }
-        .post{
-            box-shadow: 5px 3px 11px -5px rgba(132,132,132,0.81);
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
+    
 </head>
 
 <body>
