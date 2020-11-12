@@ -21,6 +21,11 @@ Route::get('/user-page', function () {
 Route::get('/user-profile', function () {
     return view('profile');
 });
+
+Route::get('/user-explore', function () {
+    return view('explore');
+});
+
 Route::get('/admin',function(){
     return view('admin');
 });
