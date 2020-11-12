@@ -15,79 +15,15 @@
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <title>Comedia - Main</title>
-<<<<<<< HEAD
 
     <link rel="stylesheet" href="css/main.css">
     
-=======
-    <style>
-        .card {
-            border-radius: 20px;
-        }
-        .card .left-area {
-            padding-left: 10px;
-            margin-bottom: 40px;;
-            
-        }
-        .card .right-area {
-            margin-right: 80px;
-            margin-top: 5px;
-            
-        }
-        .card .left-area h5 {
-            font-size: 1rem;
-            margin-top: -15px;
-        }
-        .card .left-area :first-child {
-            margin-top: -5px;
-            font-weight: bold;
-        }
-        .card .left-area p+p {
-            font-size: .6rem;
-            margin-top: -17px;
-        }
-        .container-photo {
-            border: 1px solid black;
-            width: 65%;
-            height: 40vh;
-            max-width: 70%;
-            max-height: 40vh;
-        }
-        .container-photo img {
-            max-width: 100%;
-            max-height: inherit;
-            padding:5px;
-        }
-        .container-desc {
-            width: 30%;
-            padding: 5px;
-            border: 1px solid black;
-            margin-left: 20px;
-            height: 40vh;
-            max-width: 70%;
-            max-height: 40vh;
-        }
-        .user .card img {
-            margin-left: 12px;
-            margin-right: 30px;
-        }
-        .navbar {
-            border-bottom: 1px solid #123;
-        }
-        
-    </style>
->>>>>>> 1f0724b5b3ad5478fb0eb6ec68d3278d881d2ca7
 </head>
 
 <body>
     <div class="container-fluid p-0">
-<<<<<<< HEAD
         <nav class="w-100 navbar navbar-expand-lg bg-light navbar-light ">
             <a class="navbar-brand" href="/">COMEDIA</a>
-=======
-        <nav class="w-100 navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">COMEDIA</a>
->>>>>>> 1f0724b5b3ad5478fb0eb6ec68d3278d881d2ca7
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -123,17 +59,10 @@
 
 
         <div class="container mt-3">
-<<<<<<< HEAD
             <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello Jin Sakai</h1>
             <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
             <div class="card post mt-3">
                 <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
-=======
-            <h2>Hello {{ auth()->user()->username }}</h2>
-            <h6>HERE RECOMMENDED POST FOR YOU </h6>
-            <div class="card mt-3">
-                <i class="far fa-bookmark fas fa-2x ml-auto px-3 mr-2 mt-4 mb-1"></i>
->>>>>>> 1f0724b5b3ad5478fb0eb6ec68d3278d881d2ca7
                 <div class="card-body">
                     <div class="container-photo float-left">
                         <img src="https://meshle.com/content/uploads/2019/04/GamingLP2.jpg" alt="" width="100%" height="100%" >
@@ -150,16 +79,9 @@
                         <h6>Selamat Ulang Tahun Untuk Radika</h6>
                     </div>
                     <div class="right-area ml-auto">
-<<<<<<< HEAD
                         <i class="fas fa-comment-alt fas fa-lg mr-5"></i>
                         <i class="fas fa-heart fas fa-lg mr-5"></i>
                         <i class="fas fa-share-alt fas fa-lg mr-5"></i>
-=======
-                        <i class="fas fa-comment-alt fas fa-2x mr-5"></i>
-                        <i class="fas fa-heart fas fa-2x mr-5"></i>
-                        <i class="fas fa-share-alt fas fa-2x mr-5"></i>
-                        
->>>>>>> 1f0724b5b3ad5478fb0eb6ec68d3278d881d2ca7
                     </div>
                 </div>
                 
