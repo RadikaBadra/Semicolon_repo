@@ -15,8 +15,10 @@
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <title>Comedia - Main</title>
+    
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/RadikaBadra/Semicolon_repo/master/prototype/co%20media.png">
     
 </head>
 
@@ -37,7 +39,7 @@
                         <a class="nav-link fas fa-search mr-3"></a>
                     </li>
                     <li class="nav-item">
-                        <a href ="/user-profile" class="nav-link fas fa-user mr-3"></a>
+                        <a href ="/profile" class="nav-link fas fa-user mr-3"></a>
                     </li>
                     <li class="nav-item">
                         <a class="" href="{{ route('logout') }}"
@@ -59,7 +61,7 @@
 
 
         <div class="container mt-3">
-            <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello Jin Sakai</h1>
+            <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello {{ auth()->user()->username }}</h1>
             <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
             <div class="card post mt-3">
                 <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
@@ -73,12 +75,15 @@
                 </div>
                 <div class="container d-flex">
                 <!-- <div><img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="10%" height="30%"></div> -->
-                    <div class="left-area mr-auto">
-                        <h5>semicolon</h5>
-                        <p class="text-muted">3 days ago</p>
-                        <h6>Selamat Ulang Tahun Untuk Radika</h6>
+                    <div class="left-area mr-auto d-inline-flex flex-row">
+                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
+                        <div class="caption d-">
+                            <h5>semicolon</h5>
+                            <p class="text-muted">3 days ago</p>
+                            <h6>Selamat Ulang Tahun Untuk Radika</h6>
+                        </div>
                     </div>
-                    <div class="right-area ml-auto">
+                    <div class="right-area ml-auto d-flex">
                         <i class="fas fa-comment-alt fas fa-lg mr-5"></i>
                         <i class="fas fa-heart fas fa-lg mr-5"></i>
                         <i class="fas fa-share-alt fas fa-lg mr-5"></i>
