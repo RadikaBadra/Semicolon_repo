@@ -13,21 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/user-page', function () {
-    return view('layouts.main');
-});
+Route::get('/', 'UserLayoutsController@index')->name('home');
 
-Route::get('/user-profile', function () {
-    return view('profile');
-});
+// User Route
+Route::get('/user-page', 'UserLayoutsController@UserIndex');
+Route::get('/user-profile', 'UserLayoutsController@UserProfile');
+Route::get('/user-explore', 'UserLayoutsController@UserExplore');
 
-Route::get('/user-explore', function () {
-    return view('explore');
-});
-
-Route::get('/admin',function(){
-    return view('admin');
-});
+// Admin Route
+Route::get('/admin','AdminLayoutsController@index');
 
 Auth::routes();

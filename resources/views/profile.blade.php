@@ -1,3 +1,7 @@
+<?php 
+$userinfo = auth()->user();
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,7 +50,7 @@
             </div>
         </nav>
         <section class="section-account">
-            <span class="name">JINSAKAI</span>
+            <span class="name">{{ $userinfo->username }}</span>
             <a href="#"><i class="fas fa-cog"></i></a>
         </section>
         <main class="section-main">
@@ -65,8 +69,12 @@
                     </div>
                 </div>
                 <div class="account-bio">
-                    <span class="main-bio">JINSAKAI</span>
-                    <span class="second-bio">bio</span>
+                    <span class="main-bio">{{ $userinfo->username }}</span>
+                    @if($userinfo->bio = '666defaultbio')
+                        <span class="second-bio"></span>
+                    @else
+                        <span class="second-bio">{{$userinfo->bio}}</span>
+                    @endif
                 </div>
             </div>
             <a href="#" class="btn btn-outline-secondary">Edit Profile</a>

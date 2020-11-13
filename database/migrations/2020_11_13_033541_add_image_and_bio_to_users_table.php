@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUsernameToUsersTable extends Migration
-{   
+class AddImageAndBioToUsersTable extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -14,7 +14,8 @@ class AddUsernameToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("username")->after("name");
+            $table->string('bio')->after('level');
+            $table->string('image')->after('bio');
         });
     }
 
@@ -25,11 +26,19 @@ class AddUsernameToUsersTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('users', 'username'))
+        if (Schema::hasColumn('users', 'bio'))
         {
             Schema::table('users', function (Blueprint $table)
             {
-                $table->dropColumn('username');
+                $table->dropColumn('bio');
+            });
+        }
+
+        if (Schema::hasColumn('users', 'image'))
+        {
+            Schema::table('users', function (Blueprint $table)
+            {
+                $table->dropColumn('image');
             });
         }
     }

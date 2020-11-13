@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class UserLayoutsController extends Controller
 {
-    /**
+   /**
      * Create a new controller instance.
      *
      * @return void
@@ -15,18 +15,19 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
+    public function index(){
         return view('/layouts/main');
     }
-    public function profile()
-    {
+
+    
+    public function UserIndex(){
+        return view('layouts.main');
+    }
+    public function UserProfile(){
         return view('profile');
     }
+    public function UserExplore(){
+        return view('explore');
+    }
+
 }
