@@ -24,9 +24,15 @@ class UserLayoutsController extends Controller
 
 
     public function UserIndex(){
-        $recommendpost = Post::all()->random(1);
         $post = Post::all();
-        return view('layouts.main', compact('recommendpost','post'));
+        $cekkosong = ' ';
+        $recommendpost = ' ';
+        if($post->isEmpty()){
+            $cekkosong = 'kosong';
+        }else{
+            $recommendpost = Post::all()->random(1);
+        }
+        return view('layouts.main', compact('recommendpost','post','cekkosong'));
     }
     public function UserProfile(){
         return view('profile');

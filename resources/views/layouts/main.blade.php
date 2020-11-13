@@ -67,7 +67,7 @@ $dts = \Carbon\Carbon::now();
             <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello {{ auth()->user()->username }}</h1>
             <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
 <!-- CEK ADA DATA GA DI DATABASE -->
-@if(!$recommendpost->count() AND !$post->count())
+@if($cekkosong == 'kosong')
 <p>NO DATA</p>
 @else
             <!-- RECOMMENDED POST -->
