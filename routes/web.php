@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'UserLayoutsController@index')->name('home');
+Route::get('/', 'UserLayoutsController@UserIndex')->name('home');
 
 // User Route
 Route::get('/user-page', 'UserLayoutsController@UserIndex');

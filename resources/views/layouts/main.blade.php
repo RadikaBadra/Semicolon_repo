@@ -1,3 +1,6 @@
+<?php 
+$dts = \Carbon\Carbon::now();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -63,24 +66,38 @@
         <div class="container mt-3">
             <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello {{ auth()->user()->username }}</h1>
             <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
+<!-- CEK ADA DATA GA DI DATABASE -->
+@if(!$recommendpost->count() AND !$post->count())
+<p>NO DATA</p>
+@else
+            <!-- RECOMMENDED POST -->
+
             <div class="card post mt-3">
                 <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
                 <div class="card-body">
                     <div class="container-photo float-left">
-                        <img src="https://meshle.com/content/uploads/2019/04/GamingLP2.jpg" alt="" width="100%" height="100%" >
+                        <img src="/imgpost/{{$recommendpost[0]->image}}" alt="" width="100%" height="100%" >
                     </div>
                     <div class="container-desc float-right">
-                        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ullam delectus eaque nisi! Earum, hic amet, necessitatibus sunt optio tempora, quidem veritatis nostrum impedit commodi veniam? Laborum deserunt repudiandae incidunt?</p>
+                        <p class="text-justify">{{$recommendpost[0]->caption}}</p>
                     </div>
                 </div>
                 <div class="container d-flex">
                 <!-- <div><img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="10%" height="30%"></div> -->
                     <div class="left-area mr-auto d-inline-flex flex-row">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
+                    <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
                         <div class="caption d-">
-                            <h5>semicolon</h5>
-                            <p class="text-muted">3 days ago</p>
-                            <h6>Selamat Ulang Tahun Untuk Radika</h6>
+                            <h5>{{$recommendpost[0]->user_name}}</h5>
+                            <!-- JAM -->
+                            <?php 
+                            $cek = explode(" ",$dts->diffForHumans($recommendpost[0]->created_at));
+                            if($cek[2] = "after"){
+                                $cek[2] = "ago";
+                            }
+                            
+                            ?>
+                            <p class="text-muted">{{$cek[0] . ' ' . $cek[1] . ' ' . $cek[2]}}</p>
+                            <h6>{{$recommendpost[0]->title}}</h6>
                         </div>
                     </div>
                     <div class="right-area ml-auto d-flex">
@@ -89,8 +106,10 @@
                         <i class="fas fa-share-alt fas fa-lg mr-5"></i>
                     </div>
                 </div>
-                
             </div>
+
+
+            <!-- RECOMMENDED USER -->
             <div class="container text-center d-inline-flex flex-row justify-content-between ">
                 <div class="card mt-4"style="width: 10rem;">
                     <div class="card-body">
@@ -134,14 +153,16 @@
                 </div>
             </div>
 
+            <!-- POST -->
+            @foreach($post as $pos)
             <div class="card post mt-3">
                 <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
                 <div class="card-body">
                     <div class="container-photo float-left">
-                        <img src="https://meshle.com/content/uploads/2019/04/GamingLP2.jpg" alt="" width="100%" height="100%" >
+                        <img src="/imgpost/{{$pos->image}}" alt="" width="100%" height="100%" >
                     </div>
                     <div class="container-desc float-right">
-                        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ullam delectus eaque nisi! Earum, hic amet, necessitatibus sunt optio tempora, quidem veritatis nostrum impedit commodi veniam? Laborum deserunt repudiandae incidunt?</p>
+                        <p class="text-justify">{{$pos->caption}}</p>
                     </div>
                 </div>
                 <div class="container d-flex">
@@ -149,9 +170,17 @@
                     <div class="left-area mr-auto d-inline-flex flex-row">
                         <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
                         <div class="caption d-">
-                            <h5>semicolon</h5>
-                            <p class="text-muted">3 days ago</p>
-                            <h6>Selamat Ulang Tahun Untuk Radika</h6>
+                            <h5>{{$pos->user_name}}</h5>
+                            <!-- JAM -->
+                            <?php 
+                            $cek = explode(" ",$dts->diffForHumans($recommendpost[0]->created_at));
+                            if($cek[2] = "after"){
+                                $cek[2] = "ago";
+                            }
+                            
+                            ?>
+                            <p class="text-muted">{{$cek[0] . ' ' . $cek[1] . ' ' . $cek[2]}}</p>
+                            <h6>{{$pos->title}}</h6>
                         </div>
                     </div>
                     <div class="right-area ml-auto d-flex">
@@ -161,35 +190,8 @@
                     </div>
                 </div>
             </div>
-
-<div class="card post mt-3">
-                <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
-                <div class="card-body">
-                    <div class="container-photo float-left">
-                        <img src="https://meshle.com/content/uploads/2019/04/GamingLP2.jpg" alt="" width="100%" height="100%" >
-                    </div>
-                    <div class="container-desc float-right">
-                        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ullam delectus eaque nisi! Earum, hic amet, necessitatibus sunt optio tempora, quidem veritatis nostrum impedit commodi veniam? Laborum deserunt repudiandae incidunt?</p>
-                    </div>
-                </div>
-                <div class="container d-flex">
-                <!-- <div><img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="10%" height="30%"></div> -->
-                    <div class="left-area mr-auto d-inline-flex flex-row">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
-                        <div class="caption d-">
-                            <h5>semicolon</h5>
-                            <p class="text-muted">3 days ago</p>
-                            <h6>Selamat Ulang Tahun Untuk Radika</h6>
-                        </div>
-                    </div>
-                    <div class="right-area ml-auto d-flex">
-                        <i class="fas fa-comment-alt fas fa-lg mr-5"></i>
-                        <i class="fas fa-heart fas fa-lg mr-5"></i>
-                        <i class="fas fa-share-alt fas fa-lg mr-5"></i>
-                    </div>
-                </div>
-
-        </div>
+            @endforeach
+@endif
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

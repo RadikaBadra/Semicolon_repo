@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//Model
+use App\Post;
+
 class UserLayoutsController extends Controller
 {
    /**
@@ -19,9 +22,11 @@ class UserLayoutsController extends Controller
         return view('/layouts/main');
     }
 
-    
+
     public function UserIndex(){
-        return view('layouts.main');
+        $recommendpost = Post::all()->random(1);
+        $post = Post::all();
+        return view('layouts.main', compact('recommendpost','post'));
     }
     public function UserProfile(){
         return view('profile');
