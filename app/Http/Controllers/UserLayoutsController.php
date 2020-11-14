@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 //Model
 use App\Post;
+use App\User;
 
 class UserLayoutsController extends Controller
 {
@@ -24,18 +25,35 @@ class UserLayoutsController extends Controller
 
 
     public function UserIndex(){
+        $userinformation = auth()->user();
+
+        //POST
         $post = Post::all();
-        $cekkosong = ' ';
+        $cekpost = ' ';
         $recommendpost = ' ';
         if($post->isEmpty()){
-            $cekkosong = 'kosong';
+            $cekpost = 'kosong';
         }else{
             $recommendpost = Post::all()->random(1);
         }
-        return view('layouts.main', compact('recommendpost','post','cekkosong'));
+
+        //USER
+        $user = User::where('id', '!=', $userinformation->id)->get();
+        $cekuser = ' ';
+        $recommenduser = ' ';
+        if($user->isEmpty()){
+            $cekuser = 'kosong';
+        }else if(count($user) < 5){
+            $cekuser = 'kosong';
+        }else{
+            $recommenduser = $user->random(5);
+        }
+        return view('layouts.main', compact('recommendpost', 'post', 'cekpost', 'cekuser', 'recommenduser'));
     }
     public function UserProfile(){
-        return view('profile');
+        $userinfo = auth()->user();
+        $post = Post::where('user_id', '=', $userinfo->id)->get();
+        return view('profile', compact('post'));
     }
     public function UserExplore(){
         return view('explore');

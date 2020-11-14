@@ -67,7 +67,7 @@ class RegisterController extends Controller
     {
         $level = 'user';
         $bio = '666defaultbio';
-        $image = '980defaultiamge';
+        $image = '980defaultimage.png';
         return User::create([
             'name' => $data['namaLengkap'],
             'username' => $data['namaPengguna'],

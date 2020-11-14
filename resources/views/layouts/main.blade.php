@@ -66,12 +66,13 @@ $dts = \Carbon\Carbon::now();
         <div class="container mt-3">
             <h1 class =" font-weight-bold mt-5 name" style="font-size:50px">Hello {{ auth()->user()->username }}</h1>
             <p style="margin-bottom:40px">HERE RECOMMENDED POST FOR YOU <p>
-<!-- CEK ADA DATA GA DI DATABASE -->
-@if($cekkosong == 'kosong')
-<p>NO DATA</p>
-@else
+            
             <!-- RECOMMENDED POST -->
 
+            <!-- CEK POST ADA DATA GA DI DATABASE -->
+            @if($cekpost == 'kosong')
+            <p>NO DATA</p>
+            @else
             <div class="card post mt-3">
                 <i class="far fa-bookmark fas fa-lg ml-auto px-3 mr-2 mt-4 mb-1"></i>
                 <div class="card-body">
@@ -85,7 +86,7 @@ $dts = \Carbon\Carbon::now();
                 <div class="container d-flex">
                 <!-- <div><img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="10%" height="30%"></div> -->
                     <div class="left-area mr-auto d-inline-flex flex-row">
-                    <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
+                    <img src="/imgprofile/{{$recommendpost[0]->user_image}}" class=" text-center rounded-circle mt-1 mr-1 " alt="" width="10%" height="80%">
                         <div class="caption d-">
                             <h5>{{$recommendpost[0]->user_name}}</h5>
                             <!-- JAM -->
@@ -110,49 +111,24 @@ $dts = \Carbon\Carbon::now();
 
 
             <!-- RECOMMENDED USER -->
+            <!-- CEK DATA USER ADA GA DI DATABASE -->
+            @if($cekuser == 'kosong')
+            <br><br>
+            <p>No Recommended User For You :(</p>
+            @else
             <div class="container text-center d-inline-flex flex-row justify-content-between ">
+                @foreach($recommenduser as $user)
                 <div class="card mt-4"style="width: 10rem;">
                     <div class="card-body">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="80%" height="35%">
-                        <p class="text-center mt-3">Ronaldo</p>
-                        <p class="text-center">UserRonaldo</p>
+                        <img src="/imgprofile/{{$user->image}}" class=" text-center rounded-circle " alt="" width="80%" height="35%">
+                        <p class="text-center mt-3">{{substr($user->name,0,7)}}...</p>
+                        <p class="text-center">{{$user->username}}</p>
                         <button type="button" class="btn btn-sm px-3 btn-primary ">Follow</button>
                     </div>
                 </div>
-                <div class="card mt-4"style="width: 10rem;">
-                    <div class="card-body">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="80%" height="35%">
-                        <p class="text-center mt-3">Ronaldo</p>
-                        <p class="text-center">UserRonaldo</p>
-                        <button type="button" class="btn btn-sm px-3 btn-primary ">Follow</button>
-                    </div>
-                </div>
-                <div class="card mt-4"style="width: 10rem;">
-                    <div class="card-body">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="80%" height="35%">
-                        <p class="text-center mt-3">Ronaldo</p>
-                        <p class="text-center">UserRonaldo</p>
-                        <button type="button" class="btn btn-sm px-3 btn-primary ">Follow</button>
-                    </div>
-                </div>
-                <div class="card mt-4"style="width: 10rem;">
-                    <div class="card-body">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="80%" height="35%">
-                        <p class="text-center mt-3">Ronaldo</p>
-                        <p class="text-center">UserRonaldo</p>
-                        <button type="button" class="btn btn-sm px-3 btn-primary ">Follow</button>
-                    </div>
-                </div>
-                <div class="card mt-4"style="width: 10rem;">
-                    <div class="card-body">
-                        <img src="https://devtalk.blender.org/uploads/default/original/2X/c/cbd0b1a6345a44b58dda0f6a355eb39ce4e8a56a.png" class=" text-center rounded-circle " alt="" width="80%" height="35%">
-                        <p class="text-center mt-3">Ronaldo</p>
-                        <p class="text-center">UserRonaldo</p>
-                        <button type="button" class="btn btn-sm px-3 btn-primary">Follow</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
-
+            @endif                 
             <!-- POST -->
             @foreach($post as $pos)
             <div class="card post mt-3">

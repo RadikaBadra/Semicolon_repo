@@ -147,7 +147,15 @@ body {
                             <div class="form-group mt-5">
                                 <button type="submit" class="login-btn btn btn-outline-primary btn-lg btn-block">Login</button>
                             </div>
-                            <div class="mt-5 text-center">Forgot Password ?</div>
+                            
+                            <div class="mt-5 text-center">
+                              @if (Route::has('password.request'))
+                                 <a class="btn btn-link text-dark"  href="{{ route('password.request') }}">
+                                    {{ __('Forgot Password ?') }}
+                                 </a>
+                              @endif
+                            
+                          </div>
                         </form>
 
                     </div>
