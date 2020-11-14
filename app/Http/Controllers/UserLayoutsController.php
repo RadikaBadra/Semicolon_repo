@@ -48,11 +48,16 @@ class UserLayoutsController extends Controller
         }else{
             $recommenduser = $user->random(5);
         }
+
+
         return view('layouts.main', compact('recommendpost', 'post', 'cekpost', 'cekuser', 'recommenduser'));
     }
     public function UserProfile(){
         $userinfo = auth()->user();
+
+        //Menghitung jumlah post
         $post = Post::where('user_id', '=', $userinfo->id)->get();
+        
         return view('profile', compact('post'));
     }
     public function UserExplore(){

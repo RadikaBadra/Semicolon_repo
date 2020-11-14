@@ -58,7 +58,7 @@ $userinfo = auth()->user();
                 <span class="logo"><i class="fas fa-user-circle"></i></span>
                 <div class="account-desc">
                     <div class="count-desc">
-                        <span class="post">0</span>
+                        <span class="post">{{count($post)}}</span>
                         <span class="followers">0</span>
                         <span class="following">0</span>
                     </div>

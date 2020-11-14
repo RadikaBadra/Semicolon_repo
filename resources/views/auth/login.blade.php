@@ -136,12 +136,12 @@ body {
                         @csrf
                             <div class="form-group">
                                 
-                                <input id="username" type="text" placeholder="Nama Pengguna, No HP , Email" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror" name="username" required autofocus autocomplete="off">
+                                <input id="username" type="text" placeholder="Nama Pengguna, No HP , Email" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror @if(session('status')) is-invalid @endif" name="username" required autofocus autocomplete="off">
                                 
                             </div>
                             <div class="form-group">
 
-                                <input type="password" placeholder="Kata Sandi" name="password" id="password" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror" required>
+                                <input type="password" placeholder="Kata Sandi" name="password" id="password" class="form-control mt-1 @error('namaLengkap') is-invalid @enderror @if(session('status')) is-invalid @endif" required>
                             </div>
                             
                             <div class="form-group mt-5">
@@ -154,7 +154,6 @@ body {
                                     {{ __('Forgot Password ?') }}
                                  </a>
                               @endif
-                            
                           </div>
                         </form>
 

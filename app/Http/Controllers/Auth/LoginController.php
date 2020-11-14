@@ -69,4 +69,4 @@ class LoginController extends Controller
                 ->with('status', 'Alamat Surel atau Kata Sandi SALAH');
         }
     }
-}
+}   
